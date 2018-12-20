@@ -1,0 +1,29 @@
+// Required
+@import "../../../build/node_modules/bootstrap/scss/functions";
+@import "../../../build/node_modules/bootstrap/scss/variables";
+@import "../../../build/node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "../../../build/node_modules/bootstrap/scss/reboot";
+@import "../../../build/node_modules/bootstrap/scss/type";
+@import "../../../build/node_modules/bootstrap/scss/images";
+@import "../../../build/node_modules/bootstrap/scss/code";
+@import "../../../build/node_modules/bootstrap/scss/grid";
+
+
+
+
+$fa-font-path:                "../webfonts";
+// Fontawesome
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/variables";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/mixins";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/core";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/larger";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/fixed-width";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/list";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/bordered-pulled";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/animated";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/rotated-flipped";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/stacked";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/icons";
+@import "../../../build/node_modules/@fortawesome/fontawesome-pro/scss/screen-reader";
