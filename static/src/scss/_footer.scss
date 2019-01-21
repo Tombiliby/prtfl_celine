@@ -1,5 +1,12 @@
 .footerZone {
     background: $bg_footerColor;
     color: $primaryColor_light;
-    padding: 60px 0
+    padding: 60px 0;
+
+		.summaryZone {
+			@include media-breakpoint-down(md) {
+				margin-bottom: 30px;
+			}
+		}
+
 }

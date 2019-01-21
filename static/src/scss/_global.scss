@@ -1,4 +1,11 @@
 body {
     background: $primaryColor_light;
     color: $primaryColor_dark;
+    font-family: $font-family-base;
+    .btn {
+    	font-weight:700;
+    	&.btn-light {
+    		color: $primaryColor_dark;
+    	}
+    }
 }

@@ -7,24 +7,61 @@
     .workZone {
         position: relative;
         display: block;
+        @include media-breakpoint-down(sm) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
         .workNameZone {
             position: absolute;
             bottom: 0;
             left: 0;
+            z-index: 1;
             .workName {
-                margin: 5vw;
+                margin: 3vw;
                 font-size: 5vw;
+                font-weight: 700;
+                
                 @include media-breakpoint-up(sm) {
                     font-size: 2rem;
                 }
                 @include media-breakpoint-up(lg) {
                     font-size: 3rem;
                 }
+                &.light, &.dark {
+                    transition: all 0.2s ease-in;
+                }
+                &.light {
+                    color: $primaryColor_light;
+                }
+                &.dark {
+                    color: $primaryColor_dark;
+                }
             }
         }
         .pictureZone {
             .picture {
                 width: 100%;
+            }
+            &:after {
+                content: " ";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba($primaryColor_dark, .0);
+                top: 0;
+                transition: all 0.2s ease-out;
+            }
+        }
+        &:hover {
+            .workName {
+                &.light, &.dark {
+                    color: $primaryColor_light;
+                    transition: all 0.2s ease-out;
+                }
+            }
+            .pictureZone:after {
+                transition: all 0.2s ease-in;
+                background: rgba(#000, .55);
             }
         }
     }
