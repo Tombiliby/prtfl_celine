@@ -64,39 +64,42 @@ module.exports = function(grunt) {
 		},
 		// Uglify js
 		uglify: {
-		options: {
-			mangle: {
-			except: ["jQuery", "Backbone"]
+			options: {
+				mangle: {
+				except: ["jQuery", "Backbone"]
+				}
+			},
+			my_target: {
+				files: [{
+					expand: true,
+					cwd: "<%= pathOrx.srcStatic %>/js/app",
+					src: "**/*.js",
+					dest: "<%= pathOrx.distStatic %>/js/app"
+				}]
 			}
-		},
-		my_target: {
-			files: [{
-				expand: true,
-				cwd: "<%= pathOrx.srcStatic %>/js/app",
-				src: "**/*.js",
-				dest: "<%= pathOrx.distStatic %>/js/app"
-			}]
-		}
 		},
 		// Copy 
 		copy: {
-		main: {
-			files: [
-				{ expand: true, src: ["fonts/*/*"], dest: "<%= pathOrx.distStatic %>", cwd: "<%= pathOrx.srcStatic %>/", filter: "isFile" },
-				{ expand: true, src: ["img/*/*"], dest: "<%= pathOrx.distStatic %>", cwd: "<%= pathOrx.srcStatic %>/", filter: "isFile" }
-			]
-		}
+			main: {
+				files: [
+					{ expand: true, src: ["fonts/*/*"], dest: "<%= pathOrx.distStatic %>", cwd: "<%= pathOrx.srcStatic %>/", filter: "isFile" },
+					{ expand: true, src: ["img/*/*"], dest: "<%= pathOrx.distStatic %>", cwd: "<%= pathOrx.srcStatic %>/", filter: "isFile" }
+				]
+			}
 		},
 		// Watch
 		watch: {
 			less: {
 				files: ["<%= pathOrx.srcStatic %>/less/**/*.less"],
 				tasks: ["less:compile"]
+			},
+			scss: {
+				files: ["<%= pathOrx.srcStatic %>/scss/**/*.scss"],
+				tasks: ["sass"]
 			}
 		}
 
 	});
-
 
 	// Load grunt tasks from NPM packages
 	grunt.loadNpmTasks("grunt-contrib-less");

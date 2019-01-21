@@ -1,0 +1,71 @@
+.landingVideoZone {
+    background-size: cover;
+    background-position: 50%;
+    color: $primaryColor_light;
+    background: #000;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    .landingVideo {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mainTitleZone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+        text-align: center;
+        color: $primaryColor_light;
+        .mainTitle {
+            font-size: 4rem;
+            line-height: 4rem;
+            @include media-breakpoint-up(md) {
+                font-size: 5vw;
+                line-height: 3rem;
+            }
+            .mainSubTitle {
+                font-size: 1rem;
+                line-height: 25px;
+                display: inline-block;
+                @include media-breakpoint-down(md) {
+                    margin-top: 30vh;
+                }
+            }
+        }
+    }
+    .arrowLandingZone {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .imgArrowLanding {
+        width: 30px;
+        animation-name: topBottom;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes topBottom {
+    0% {
+        transform: translateY(-5px)
+    }
+
+    to {
+        transform: translateY(5px)
+    }
+}
