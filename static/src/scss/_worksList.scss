@@ -20,7 +20,8 @@
                 margin: 3vw;
                 font-size: 5vw;
                 font-weight: 700;
-                
+                text-shadow: 0 0 0px rgba(0,0,0,0);
+                transition: all 0.2s ease-in;
                 @include media-breakpoint-up(sm) {
                     font-size: 2rem;
                 }
@@ -58,6 +59,9 @@
                     color: $primaryColor_light;
                     transition: all 0.2s ease-out;
                 }
+                margin-bottom: 5vw;
+                text-shadow: 0 0 15px rgba(0,0,0,1);
+                transition: all 0.2s ease-in;
             }
             .pictureZone:after {
                 transition: all 0.2s ease-in;
