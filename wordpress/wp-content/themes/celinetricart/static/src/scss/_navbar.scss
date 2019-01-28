@@ -1,0 +1,54 @@
+.headerZone {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    color: $primaryColor_light;
+    a, .navbar-toggler {
+        color: $primaryColor_light;
+        border-color: $primaryColor_light;
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$primaryColor_light}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .mainNavbar {
+        padding: 0;
+        .navbar-collapse {
+            padding: 30px;
+            @include media-breakpoint-down(md) {
+                background: rgba(0,0,0,1);
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                padding: 0px;
+                .navbar-nav {
+                    margin: 60px 15px 30px;
+                    .nav-item {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        .navbar-toggler {
+            z-index: 10;
+            margin: 15px;
+        }
+        .nav-item {
+            border-bottom: 0px solid $primaryColor_light;
+            transition: all 0.1s ease-out;
+            &:hover {
+                border-bottom: 5px solid $primaryColor_light;
+                transition: all 0.2s ease-out;
+            }
+            @include media-breakpoint-up(lg) {
+                margin: 0 30px;
+            }
+            .nav-link {
+                padding-left: 0px;
+                padding-right: 0px;
+                border-bottom: 3px solid $primaryColor_light;
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+}
