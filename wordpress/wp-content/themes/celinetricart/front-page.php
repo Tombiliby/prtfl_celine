@@ -11,6 +11,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 
 		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/css/style.css" rel="stylesheet">
+		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/css/modal-video.min.css" rel="stylesheet">
 		
 		<!-- Fontawsome -->
 		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/fontawesome-pro/css/all.css" rel="stylesheet">
@@ -57,7 +58,7 @@
 					</div>
 					<div class="arrowLandingZone">
 						<a href="#scn_director" class="arrowLanding scrollToTarget">
-							<img class="imgArrowLanding" src="files/arrow-2.png" alt="">
+							<img class="imgArrowLanding" src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/img/arrow-2.png" alt="">
 						</a>
 					</div>
 				</div>
@@ -193,7 +194,7 @@
 		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/jquery/dist/jquery.min.js"></script>
 		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/fontawesome-pro/js/all.min.js"></script>
-		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/js/jquery-modal-video.min.js"></script>
+		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/js/modal-video.min.js"></script>
 
 		<script>
 			app = {};
@@ -225,8 +226,9 @@
 			   scrollToAnchor(lnk);
 			});
 
-            new ModalVideo('.js-modal-video', {channel: 'vimeo'});
-
+            window.addEventListener('DOMContentLoaded',function(){	
+                new ModalVideo('.js-modal-video', {channel: 'vimeo'});
+            });
 		</script>
 
 		<?php wp_footer(); ?>
