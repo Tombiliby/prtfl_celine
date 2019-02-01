@@ -64,88 +64,56 @@
 				</div>
 				<div class="container worksListZone">
 					<h2 id="scn_director" class="h2 text-center titleSection">DIRECTOR</h2>
-                    
-                    <?php query_posts('cat=3'); ?>
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <h1>ROGER</h1>
-                        <?php the_content(); ?>
-                    <?php endwhile; endif; ?>
+					<!-- Director -->                    
+					<?php 
+						query_posts(array( 
+							'post_type' => 'work',
+							'showposts' => 10,
+							'cat'=> 3
+						) );  
+					?>
+					<?php while (have_posts()) : the_post(); ?>
+						<div class="row">
+							<div class="col">
+								<div class="workZone js-modal-video" data-video-id="<?php the_field("vimeo_id"); ?>">
+									<div class="workNameZone">
+										<h3 class="workName <?php the_field("color"); ?>">
+											<?php the_field("titre"); ?>
+										</h3>
+									</div>
+									<div class="pictureZone">
+										<img src="<?php the_field("image"); ?>" alt="work" class="picture">
+									</div>
+								</div>
+							</div>
+						</div>
+					<?php endwhile;?>
 
-					<div class="row">
-						<div class="col">
-							<div class="workZone js-modal-video" data-video-id="202177974">
-								<div class="workNameZone">
-									<h3 class="workName dark">THE <br> SUN <br> LADIES</h3>
-								</div>
-								<div class="pictureZone">
-									<img src="files/image_1.jpg" alt="work" class="picture">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<div class="workZone">
-								<div class="workNameZone">
-									<h3 class="workName light">COFEE <br> BREAKS</h3>
-								</div>
-								<div class="pictureZone">
-									<img src="files/image_2.jpg" alt="work" class="picture">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<div class="workZone">
-								<div class="workNameZone">
-									<h3 class="workName light">LOREM <br> IPSUM <br> DOLOR</h3>
-								</div>
-								<div class="pictureZone">
-									<img src="files/image_3.jpg" alt="work" class="picture">
-								</div>
-							</div>
-						</div>
-					</div>
-
+					<!-- Cinematographer -->
 					<h2 id="scn_cinematographer" class="h2 text-center titleSection">CINEMATOGRAPHER</h2>
-
-					<div class="row">
-						<div class="col">
-							<div class="workZone">
-								<div class="workNameZone">
-										<h3 class="workName light">LOREM <br> IPSUM <br> DOLOR</h3>
-								</div>
-								<div class="pictureZone">
-									<img src="files/image_4.jpg" alt="work" class="picture">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<div class="workZone">
-								<div class="workNameZone">
-									<h3 class="workName light">IPS <br> DOLOR</h3>
-								</div>
-								<div class="pictureZone">
-									<img src="files/image_5.jpg" alt="work" class="picture">
+					<?php 
+						query_posts(array( 
+							'post_type' => 'work',
+							'showposts' => 10,
+							'cat'=> 3
+						) );  
+					?>
+					<?php while (have_posts()) : the_post(); ?>
+						<div class="row">
+							<div class="col">
+								<div class="workZone js-modal-video" data-video-id="<?php the_field("vimeo_id"); ?>">
+									<div class="workNameZone">
+										<h3 class="workName <?php the_field("color"); ?>">
+											<?php the_field("titre"); ?>
+										</h3>
+									</div>
+									<div class="pictureZone">
+										<img src="<?php the_field("image"); ?>" alt="work" class="picture">
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col">
-							<div class="workZone">
-								<div class="workNameZone">
-									<h3 class="workName light">IPS <br> DOLOR</h3>
-								</div>
-								<div class="pictureZone">
-									<img src="files/image_6.jpg" alt="work" class="picture">
-								</div>
-							</div>
-						</div>
-					</div>
+					<?php endwhile;?>
 				</div>
 				<div class="footerZone">
 					<div class="container">

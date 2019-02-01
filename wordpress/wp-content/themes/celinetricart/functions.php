@@ -209,9 +209,9 @@ function create_post_work() {
 		'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
 		'has_archive' => false,
 		'supports' => array(
-			'title',
-			'custom-fields',
-			'thumbnail'
+			//'title',
+			'custom-fields'
+			//'thumbnail'
 		), // Go to Dashboard Custom HTML5 Blank post for supports
 		'can_export' => true, // Allows export in Tools > Export
 		'taxonomies' => array(
