@@ -11,10 +11,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 
 		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/css/style.css" rel="stylesheet">
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/css/fonts.css" rel="stylesheet">
 		
 		<!-- Fontawsome -->
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/build/node_modules/@fortawesome/fontawesome-pro/css/all.css" rel="stylesheet">
+		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/fontawesome-pro/css/all.css" rel="stylesheet">
 
 		<?php wp_head();?>
 	</head>
@@ -73,14 +72,14 @@
 
 					<div class="row">
 						<div class="col">
-							<a href="#" class="workZone">
+							<div class="workZone js-modal-video" data-video-id="202177974">
 								<div class="workNameZone">
 									<h3 class="workName dark">THE <br> SUN <br> LADIES</h3>
 								</div>
 								<div class="pictureZone">
 									<img src="files/image_1.jpg" alt="work" class="picture">
 								</div>
-							</a>
+							</div>
 						</div>
 					</div>
 					<div class="row">
@@ -191,9 +190,10 @@
 				</div>
 			</div>
 		</div>
-		<script src="./build/node_modules/jquery/dist/jquery.min.js"></script>
-		<script src="./build/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="./build/node_modules/@fortawesome/fontawesome-pro/js/all.js"></script>
+		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/jquery/dist/jquery.min.js"></script>
+		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/fontawesome-pro/js/all.min.js"></script>
+		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/js/jquery-modal-video.min.js"></script>
 
 		<script>
 			app = {};
@@ -224,6 +224,8 @@
 				var lnk = $(this).attr("href");
 			   scrollToAnchor(lnk);
 			});
+
+            new ModalVideo('.js-modal-video', {channel: 'vimeo'});
 
 		</script>
 
