@@ -43,16 +43,17 @@
 						</nav>
 					</div>
 				</div>
+                <?php if(!function_exists("get_field")) return; ?>
 				<div class="landingVideoZone">
 					<div class="mainTitleZone">
 						<h1 class="h1 mainTitle">
-							<div class="nameTitle">CELINE TRICART</div>
-							<span class="mainSubTitle">FILM - DOCUMENTARY - COMMERCIALS - VR/AR/XR</span>
+							<div class="nameTitle"><?php the_field("main_title"); ?></div>
+							<span class="mainSubTitle"><?php the_field("main_subtitle"); ?></span>
 						</h1>
 					</div>
 					<div class="landingVideo" style="background:#fff">
 						<video autoplay muted loop id="mainVideo">
-							<source src="files/celine-tricart-directors-reel.mp4" type="video/mp4">
+							<source src="<?php the_field("video"); ?>" type="video/mp4">
 						</video>
 					</div>
 					<div class="arrowLandingZone">
@@ -63,6 +64,13 @@
 				</div>
 				<div class="container worksListZone">
 					<h2 id="scn_director" class="h2 text-center titleSection">DIRECTOR</h2>
+                    
+                    <?php query_posts('cat=3'); ?>
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                        <h1>ROGER</h1>
+                        <?php the_content(); ?>
+                    <?php endwhile; endif; ?>
+
 					<div class="row">
 						<div class="col">
 							<a href="#" class="workZone">
