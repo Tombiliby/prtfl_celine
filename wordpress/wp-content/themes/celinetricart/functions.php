@@ -209,7 +209,7 @@ function create_post_work() {
 		'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
 		'has_archive' => false,
 		'supports' => array(
-			//'title',
+			'title',
 			'custom-fields'
 			//'thumbnail'
 		), // Go to Dashboard Custom HTML5 Blank post for supports

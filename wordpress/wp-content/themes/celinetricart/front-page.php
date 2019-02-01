@@ -63,7 +63,6 @@
 					</div>
 				</div>
 				<div class="container worksListZone">
-					<h2 id="scn_director" class="h2 text-center titleSection">DIRECTOR</h2>
 					<!-- Director -->                    
 					<?php 
 						query_posts(array( 
@@ -72,6 +71,9 @@
 							'cat'=> 3
 						) );  
 					?>
+					<?php if (have_posts()): ?>
+						<h2 id="scn_director" class="h2 text-center titleSection">DIRECTOR</h2>
+					<?php endif; ?>
 					<?php while (have_posts()) : the_post(); ?>
 						<div class="row">
 							<div class="col">
@@ -90,14 +92,16 @@
 					<?php endwhile;?>
 
 					<!-- Cinematographer -->
-					<h2 id="scn_cinematographer" class="h2 text-center titleSection">CINEMATOGRAPHER</h2>
 					<?php 
 						query_posts(array( 
 							'post_type' => 'work',
 							'showposts' => 10,
-							'cat'=> 3
+							'cat'=> 4
 						) );  
 					?>
+					<?php if (have_posts()): ?>
+						<h2 id="scn_cinematographer" class="h2 text-center titleSection">CINEMATOGRAPHER</h2>
+					<?php endif; ?>
 					<?php while (have_posts()) : the_post(); ?>
 						<div class="row">
 							<div class="col">
@@ -114,6 +118,7 @@
 							</div>
 						</div>
 					<?php endwhile;?>
+
 				</div>
 				<div class="footerZone">
 					<div class="container">
