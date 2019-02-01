@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<title>ORCHESTRA</title>
+	<?php get_header(); ?>
 
-		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/css/style.css" rel="stylesheet">
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/css/modal-video.min.css" rel="stylesheet">
-		
-		<!-- Fontawsome -->
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/fontawesome-pro/css/all.css" rel="stylesheet">
-
-		<?php wp_head();?>
-	</head>
-	<body>
 		<div class="contentSite">
 			<div class="contentZone">
 				<div class="headerZone">
@@ -164,47 +145,5 @@
 				</div>
 			</div>
 		</div>
-		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/jquery/dist/jquery.min.js"></script>
-		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/fontawesome-pro/js/all.min.js"></script>
-		<script src="<?php echo get_bloginfo('template_directory'); ?>/static/dist/js/modal-video.min.js"></script>
 
-		<script>
-			app = {};
-		</script>
-
-		<script>
-			$('body').on({
-				'touchmove': function(e) { 
-					console.log($(this).scrollTop()); // Replace this with your code.
-
-						$("#console").html($(this).scrollTop());
-				}
-			});
-			$(document).on({
-				'scroll': function(e) { 
-					console.log("scroll" + $(this).scrollTop()); // Replace this with your code.
-
-						$("#console").html("scroll" + $(this).scrollTop());
-				}
-			});
-
-			function scrollToAnchor(tgt){
-			    var target = $(tgt);
-			    $('html,body').animate({scrollTop: target.offset().top},'slow');
-			}
-
-			$(".scrollToTarget").click(function() {
-				var lnk = $(this).attr("href");
-			   scrollToAnchor(lnk);
-			});
-
-            window.addEventListener('DOMContentLoaded',function(){	
-                new ModalVideo('.js-modal-video', {channel: 'vimeo'});
-            });
-		</script>
-
-		<?php wp_footer(); ?>
-		
-	</body>
-</html>
+		<?php get_footer(); ?>
