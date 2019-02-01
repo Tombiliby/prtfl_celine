@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<title>ORCHESTRA</title>
+<?php get_header(); ?>
 
-		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/css/style.css" rel="stylesheet">
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/static/dist/css/fonts.css" rel="stylesheet">
-		
-		<!-- Fontawsome -->
-		<link href="<?php echo get_bloginfo('template_directory'); ?>/build/node_modules/@fortawesome/fontawesome-pro/css/all.css" rel="stylesheet">
-
-		<?php wp_head();?>
-	</head>
-	<body>
 		<div class="contentSite">
 			<div class="contentZone">
 				<div class="headerZone">
@@ -34,6 +15,9 @@
 									</li>
 									<li class="nav-item">
 										<a class="nav-link scrollToTarget" href="#scn_cinematographer">CINEMATOGRAPHER</a>
+									</li>
+									<li class="nav-item">
+									<a class="nav-link scrollToTarget" href="#scn_about">ABOUT</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link scrollToTarget" href="#scn_contact">CONTACT</a>
@@ -144,7 +128,7 @@
 						<div class="row">
 							<div class="col-lg-5 summaryZone">
 								<div class="titleZone">
-									<h3 class="h3">CELINE TRICART</h3>
+									<h3 id="scn_about" class="h3">CELINE TRICART</h3>
 								</div>
 								<div class="bodyZone">
 									<p>Ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
@@ -183,43 +167,5 @@
 				</div>
 			</div>
 		</div>
-		<script src="./build/node_modules/jquery/dist/jquery.min.js"></script>
-		<script src="./build/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="./build/node_modules/@fortawesome/fontawesome-pro/js/all.js"></script>
-
-		<script>
-			app = {};
-		</script>
-
-		<script>
-			$('body').on({
-				'touchmove': function(e) { 
-					console.log($(this).scrollTop()); // Replace this with your code.
-
-						$("#console").html($(this).scrollTop());
-				}
-			});
-			$(document).on({
-				'scroll': function(e) { 
-					console.log("scroll" + $(this).scrollTop()); // Replace this with your code.
-
-						$("#console").html("scroll" + $(this).scrollTop());
-				}
-			});
-
-			function scrollToAnchor(tgt){
-			    var target = $(tgt);
-			    $('html,body').animate({scrollTop: target.offset().top},'slow');
-			}
-
-			$(".scrollToTarget").click(function() {
-				var lnk = $(this).attr("href");
-			   scrollToAnchor(lnk);
-			});
-
-		</script>
-
-		<?php wp_footer(); ?>
-
-	</body>
-</html>
+		
+		<?php get_footer(); ?>

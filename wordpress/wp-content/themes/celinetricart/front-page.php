@@ -17,6 +17,9 @@
 										<a class="nav-link scrollToTarget" href="#scn_cinematographer">CINEMATOGRAPHER</a>
 									</li>
 									<li class="nav-item">
+										<a class="nav-link scrollToTarget" href="#scn_about">ABOUT</a>
+									</li>
+									<li class="nav-item">
 										<a class="nav-link scrollToTarget" href="#scn_contact">CONTACT</a>
 									</li>
 								</ul>
@@ -113,7 +116,7 @@
 							<?php if(!function_exists("get_field")) return; ?>
 							<div class="col-lg-5 summaryZone">
 								<div class="titleZone">
-									<h3 class="h3"><?php the_field("main_title"); ?></h3>
+									<h3 id="scn_about" class="h3"><?php the_field("main_title"); ?></h3>
 								</div>
 								<div class="bodyZone">
 									<?php the_field("about"); ?>
