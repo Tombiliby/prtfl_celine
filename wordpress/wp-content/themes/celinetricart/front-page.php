@@ -71,7 +71,10 @@
 							</div>
 						</div>
 					<?php endwhile;?>
-
+					<?php
+						// Reset Query
+						wp_reset_query();
+					?>
 					<!-- Cinematographer -->
 					<?php 
 						query_posts(array( 
@@ -99,18 +102,21 @@
 							</div>
 						</div>
 					<?php endwhile;?>
-
+					<?php
+						// Reset Query
+						wp_reset_query();
+					?>
 				</div>
 				<div class="footerZone">
 					<div class="container">
 						<div class="row">
+							<?php if(!function_exists("get_field")) return; ?>
 							<div class="col-lg-5 summaryZone">
 								<div class="titleZone">
-									<h3 class="h3">CELINE TRICART</h3>
+									<h3 class="h3"><?php the_field("main_title"); ?></h3>
 								</div>
 								<div class="bodyZone">
-									<p>Ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-									<p>msan et iusto odio dmsan et iusto odio dmsan et iusto odio dmsan et iusto odio dmsan et iusto odio dmsan et iusto odio dmsan et iusto odio dmsan et iusto odio dmsan et iusto odio dmsan et iusto odio d</p>
+									<?php the_field("about"); ?>
 								</div>
 	
 							</div>
@@ -120,24 +126,7 @@
 									<h3 id="scn_contact" class="h3">CONTACT</h3>
 								</div>
 								<div class="contactForm">
-									<form action="">
-										<div class="form-group">
-											<label for="ipt_mailAdress">Email address</label>
-											<input type="email" class="form-control" id="ipt_mailAdress" placeholder="name@example.com">
-										</div>
-										<div class="form-group">
-											<label for="txt_message">Message</label>
-											<textarea id="txt_message" rows="5" class="form-control"></textarea>
-										</div>
-										<div class="formButtonZone">
-											<div class="d-flex">
-												<div class="p-2 w-100"></div>
-												<div class="p-2">
-													<button type="submit" class="btn btn-light">SEND</button>
-												</div>
-											</div>
-										</div>
-									</form>
+									<?php echo do_shortcode( '[contact-form-7 id="174" title="contact"]' ); ?>
 								</div>
 							</div>
 						</div>
