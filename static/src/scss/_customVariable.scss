@@ -4,6 +4,8 @@ $font-family-base:					  'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI"
 $headings-font-weight:        300;
 $headings-line-height:        1;
 
+$body-color:                #212529;
+
 
 // Colors
 $primaryColor_light:          #F0EEE1;
@@ -17,3 +19,8 @@ $border-radius-sm:            0rem;
 
 // Components
 $component-active-bg:         $primaryColor_light;
+
+// Links
+$link-color:                  inherit;
+$link-decoration:             underline;
+$link-hover-color:            inherit;
