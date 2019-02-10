@@ -9574,6 +9574,7 @@ body .btn.btn-light {
   padding-right: 0px;
   border-bottom: 3px solid #F0EEE1;
   transition: all 0.2s ease-out;
+  text-decoration: none;
 }
 
 .landingVideoZone {
@@ -9617,7 +9618,7 @@ body .btn.btn-light {
   font-size: 4rem;
   font-weight: 300;
   line-height: 1;
-  letter-spacing: 10px;
+  letter-spacing: 0.2em;
 }
 @media (min-width: 768px) {
   .landingVideoZone .mainTitleZone .mainTitle .nameTitle {
@@ -9666,6 +9667,7 @@ body .btn.btn-light {
 .worksListZone .titleSection {
   padding: 15px;
   margin: 35px 0 30px;
+  letter-spacing: 0.2em;
 }
 .worksListZone .workZone {
   position: relative;
@@ -9736,7 +9738,7 @@ body .btn.btn-light {
 }
 
 .footerZone {
-  background: #C5C4BA;
+  background: #afaea5;
   color: #F0EEE1;
   padding: 60px 0;
 }
