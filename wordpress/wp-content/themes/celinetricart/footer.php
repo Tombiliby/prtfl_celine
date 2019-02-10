@@ -34,8 +34,9 @@
 			   scrollToAnchor(lnk);
 			});
 
-            window.addEventListener('DOMContentLoaded',function(){	
-                new ModalVideo('.js-modal-video', {channel: 'vimeo'});
+            window.addEventListener('DOMContentLoaded',function(){
+                new ModalVideo('.js-modal-vimeo', {channel: 'vimeo'});
+                new ModalVideo('.js-modal-youtube');
             });
 		</script>
 

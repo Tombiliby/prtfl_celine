@@ -61,7 +61,7 @@
 					<?php while (have_posts()) : the_post(); ?>
 						<div class="row">
 							<div class="col">
-								<div class="workZone js-modal-video" data-video-id="<?php the_field("vimeo_id"); ?>">
+								<div class="workZone <?php the_field("hebergement_video"); ?>" data-video-id="<?php the_field("video_id"); ?>">
 									<div class="workNameZone">
 										<h3 class="workName <?php the_field("color"); ?>">
 											<?php the_field("titre"); ?>
@@ -92,7 +92,7 @@
 					<?php while (have_posts()) : the_post(); ?>
 						<div class="row">
 							<div class="col">
-								<div class="workZone js-modal-video" data-video-id="<?php the_field("vimeo_id"); ?>">
+								<div class="workZone <?php the_field("hebergement_video"); ?>" data-video-id="<?php the_field("video_id"); ?>">
 									<div class="workNameZone">
 										<h3 class="workName <?php the_field("color"); ?>">
 											<?php the_field("titre"); ?>
