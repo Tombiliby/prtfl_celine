@@ -9,3 +9,6 @@ wordpress/wp-config.php
 wordpress/._wp-config.php
 ai1wm-backups
 .htaccess
+uploads
+*.iml
+*.log
