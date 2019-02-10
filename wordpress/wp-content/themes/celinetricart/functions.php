@@ -213,10 +213,10 @@ function create_post_work() {
 			'custom-fields'
 			//'thumbnail'
 		), // Go to Dashboard Custom HTML5 Blank post for supports
-		'can_export' => true, // Allows export in Tools > Export
-		'taxonomies' => array(
-				'category'
-		) // Add Category and Post Tags support
+		'can_export' => true // Allows export in Tools > Export
+		//'taxonomies' => array(
+		//		'category'
+		//) // Add Category and Post Tags support
 	));
 }
 add_action('init', 'create_post_work'); // Add our work type
