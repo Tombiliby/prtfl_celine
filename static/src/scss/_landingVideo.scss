@@ -32,7 +32,19 @@
         color: $primaryColor_light;
         .mainTitle {
             padding: 0 15px;
-            .nameTitle {
+            .logoDesktop {
+                display: none;
+                width: 45vw;
+                @include media-breakpoint-up(md) {
+                    display: block;
+                }
+            }
+            .logoMobile {
+                @include media-breakpoint-up(md) {
+                    display: none;
+                }
+            }
+            .nameTitle { // remove in HTML
                 font-size: 4rem;
                 font-weight: 300;
                 line-height: 1;

@@ -9614,6 +9614,20 @@ body .btn.btn-light {
 .landingVideoZone .mainTitleZone .mainTitle {
   padding: 0 15px;
 }
+.landingVideoZone .mainTitleZone .mainTitle .logoDesktop {
+  display: none;
+  width: 45vw;
+}
+@media (min-width: 768px) {
+  .landingVideoZone .mainTitleZone .mainTitle .logoDesktop {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .landingVideoZone .mainTitleZone .mainTitle .logoMobile {
+    display: none;
+  }
+}
 .landingVideoZone .mainTitleZone .mainTitle .nameTitle {
   font-size: 4rem;
   font-weight: 300;
