@@ -32,6 +32,19 @@
         color: $primaryColor_light;
         .mainTitle {
             padding: 0 15px;
+            .logoZone {
+                .logoDesktop {
+                    display: none;
+                    @include media-breakpoint-up(md) {
+                        display: block;
+                    }
+                }
+                .logoMobile {
+                    @include media-breakpoint-up(md) {
+                        display: none;
+                    }
+                }
+            }
             .nameTitle {
                 font-size: 4rem;
                 font-weight: 300;
@@ -45,8 +58,9 @@
                 font-size: 1rem;
                 line-height: 25px;
                 display: inline-block;
+                letter-spacing: 0.2em;
                 @include media-breakpoint-down(md) {
-                    margin-top: 30vh;
+                    margin-top: 20vh;
                 }
             }
         }
