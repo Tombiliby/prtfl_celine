@@ -35,8 +35,12 @@
             .logoZone {
                 .logoDesktop {
                     display: none;
+                    width: 85vw;
                     @include media-breakpoint-up(md) {
                         display: block;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        width: 843px;
                     }
                 }
                 .logoMobile {
@@ -59,6 +63,7 @@
                 line-height: 25px;
                 display: inline-block;
                 letter-spacing: 0.2em;
+                margin-top: 20vh;
                 @include media-breakpoint-down(md) {
                     margin-top: 20vh;
                 }

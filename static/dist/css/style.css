@@ -7485,7 +7485,8 @@ body {
   position: absolute;
   z-index: 100;
   width: 100%;
-  color: #F0EEE1; }
+  color: #F0EEE1;
+  letter-spacing: 0.2em; }
   .headerZone a, .headerZone .navbar-toggler {
     color: #F0EEE1;
     border-color: #F0EEE1; }
@@ -7559,10 +7560,14 @@ body {
     .landingVideoZone .mainTitleZone .mainTitle {
       padding: 0 15px; }
       .landingVideoZone .mainTitleZone .mainTitle .logoZone .logoDesktop {
-        display: none; }
+        display: none;
+        width: 85vw; }
         @media (min-width: 768px) {
           .landingVideoZone .mainTitleZone .mainTitle .logoZone .logoDesktop {
             display: block; } }
+        @media (min-width: 992px) {
+          .landingVideoZone .mainTitleZone .mainTitle .logoZone .logoDesktop {
+            width: 843px; } }
       @media (min-width: 768px) {
         .landingVideoZone .mainTitleZone .mainTitle .logoZone .logoMobile {
           display: none; } }
@@ -7578,7 +7583,8 @@ body {
         font-size: 1rem;
         line-height: 25px;
         display: inline-block;
-        letter-spacing: 0.2em; }
+        letter-spacing: 0.2em;
+        margin-top: 20vh; }
         @media (max-width: 991.98px) {
           .landingVideoZone .mainTitleZone .mainTitle .mainSubTitle {
             margin-top: 20vh; } }
@@ -7668,6 +7674,8 @@ body {
   background: #afaea5;
   color: #F0EEE1;
   padding: 60px 0; }
+  .footerZone h2, .footerZone h3 {
+    letter-spacing: 0.2em; }
   @media (max-width: 991.98px) {
     .footerZone .summaryZone {
       margin-bottom: 30px; } }

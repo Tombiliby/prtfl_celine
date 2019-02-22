@@ -3,7 +3,7 @@
     .titleSection {
         padding: 15px;
         margin: 35px 0 30px;
-        letter-spacing: 0.2em;
+        letter-spacing: $title-letter-spacing;
         @include media-breakpoint-down(sm) {
             font-size: 1.5rem;
         }
